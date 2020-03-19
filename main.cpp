@@ -1,11 +1,15 @@
-#include "mainwindow.h"
-
 #include <QApplication>
+#include "gameenvironment.h"
+
+GameEnvironment  *gameEnvironment;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+
+    gameEnvironment = new GameEnvironment();
+    gameEnvironment->show();
+
+
     return a.exec();
 }
